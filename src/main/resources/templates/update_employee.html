@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+<h2>update employe</h2>
+<form action="#" th:action="@{/saveEmploye}" th:object="${employe}" method="POST">
+<!--add hidden from field to handle update-->
+<input type="hidden" th:field="*{id}"/>
+<input type="text" th:field="*{firstname}"/>
+<input type="text" th:field="*{lastname}"/>
+<input type="text" th:field="*{emailid}"/>
+<button type="submit">update employe</button>
+
+
+
+</form>
+<hr>
+<a th:href="@{/}">back to employe list</a>
+
+</body>
+</html>
